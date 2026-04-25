@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grey2Green | Marketing et Floorplan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand-wrap" href="index.html">
+        <img class="brand-logo" src="images\logo sans texte.png" alt="Logo Grey2Green" onerror="this.style.display='none'">
+        <span class="brand">Grey2Green</span>
+      </a>
+      <div class="nav-actions">
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Accueil</a>
+          <a class="nav-link" href="presentation-entreprise.html">Presentation</a>
+          <a class="nav-link" href="vision-mission.html">Vision & Mission</a>
+          <a class="nav-link active" href="marketing-floorplan.html">Marketing</a>
+          <a class="nav-link" href="about-us.html">About Us</a>
+        </nav>
+        <a class="nav-cta" href="contact.html">Contactez nous</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="container">
+      <section class="card">
+        <h1>Marketing et floorplan de l'entreprise</h1>
+        <p>
+          Notre strategie marketing s'adresse d'abord aux collectivites et aux promoteurs de programmes neufs,
+          avec une proposition claire: transformer les eaux grises des immeubles en ressource locale pour irriguer
+          les espaces verts sans mobiliser d'eau potable.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Digital marketing de Grey2Green</h2>
+        <p>
+          Notre marketing digital repose sur une logique B2B/B2G: identifier les bons interlocuteurs, expliquer
+          simplement le modele et apporter des preuves d'impact. Nous privilegions des messages cibles et des contenus
+          pedagogiques pour faire progresser les prospects vers un echange qualifie.
+        </p>
+        <ul>
+          <li>Prospection ciblee (LinkedIn, emailing qualifie, prises de contact directes).</li>
+          <li>Contenus de preuve: cas d'usage, indicateurs d'economie d'eau, retours terrain.</li>
+          <li>Parcours de conversion vers une etude pilote puis un deploiement multi-sites.</li>
+        </ul>
+      </section>
+
+      <section class="card two-col">
+        <article>
+          <h2>Floorplan et parcours client</h2>
+          <p>
+            Notre floorplan s'appuie sur une boucle locale simple: recuperation des eaux grises en residence,
+            filtration, stockage en citerne, puis redistribution pour l'irrigation urbaine. Le parcours client
+            est pense pour securiser chaque etape technique, economique et operationnelle.
+          </p>
+          <ul>
+            <li>Cadrage du besoin avec la collectivite ou le promoteur.</li>
+            <li>Etude de faisabilite et validation du pilote.</li>
+            <li>Installation, mise en service puis suivi via abonnement de maintenance.</li>
+          </ul>
+        </article>
+        <aside class="image-box auto-carousel" data-carousel>
+          <div class="auto-carousel-track">
+            <img src="images\devanture.png" alt="Parcours client Grey2Green - etape 1">
+            <img src="images\floorplan.png" alt="Parcours client Grey2Green - etape 2">
+          </div>
+          <button class="carousel-btn carousel-btn-prev" type="button" data-carousel-prev aria-label="Image precedente">‹</button>
+          <button class="carousel-btn carousel-btn-next" type="button" data-carousel-next aria-label="Image suivante">›</button>
+        </aside>
+      </section>
+
+      <section class="card two-col">
+        <article>
+          <h2>Ou nous trouver</h2>
+          <p>
+            Notre espace de travail sert de point de rencontre pour les partenaires publics et prives.
+            C'est un lieu de demonstration, de cadrage projet et de lancement des etudes techniques,
+            avec une priorite actuelle sur Montpellier et le Sud de la France.
+          </p>
+          <div class="image-box auto-carousel" data-carousel>
+            <div class="auto-carousel-track">
+              <img src="images\intérieur image 1.png" alt="Devanture Grey2Green - visuel 1">
+              <img src="images\intérieur image 2.png" alt="Devanture Grey2Green - visuel 2">
+              <img src="images\intérieur image 3.png" alt="Devanture Grey2Green - visuel 3">
+              <img src="images\intérieur image 4.png" alt="Devanture Grey2Green - visuel 4">
+              <img src="images\intérieur image 5.png" alt="Devanture Grey2Green - visuel 5">
+            </div>
+            <button class="carousel-btn carousel-btn-prev" type="button" data-carousel-prev aria-label="Image precedente">‹</button>
+            <button class="carousel-btn carousel-btn-next" type="button" data-carousel-next aria-label="Image suivante">›</button>
+          </div>
+        </article>
+        <aside class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=43.6110,3.8767&z=14&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Point Google Maps Grey2Green">
+          </iframe>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Grey2Green</div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousels = document.querySelectorAll('[data-carousel]');
+      carousels.forEach((carousel) => {
+        const track = carousel.querySelector('.auto-carousel-track');
+        const prevBtn = carousel.querySelector('[data-carousel-prev]');
+        const nextBtn = carousel.querySelector('[data-carousel-next]');
+        if (!track) return;
+
+        const slides = track.querySelectorAll('img');
+        const maxSlides = slides.length;
+        if (maxSlides < 2) return;
+        track.style.setProperty('--slides', String(maxSlides));
+
+        let current = 0;
+        let timerId = null;
+
+        const update = () => {
+          const shift = -(100 / maxSlides) * current;
+          track.style.transform = `translateX(${shift}%)`;
+        };
+
+        const next = () => {
+          current = (current + 1) % maxSlides;
+          update();
+        };
+
+        const prev = () => {
+          current = (current - 1 + maxSlides) % maxSlides;
+          update();
+        };
+
+        const startAuto = () => {
+          if (timerId !== null) return;
+          timerId = setInterval(next, 6000);
+        };
+
+        const stopAuto = () => {
+          if (timerId === null) return;
+          clearInterval(timerId);
+          timerId = null;
+        };
+
+        if (prevBtn) prevBtn.addEventListener('click', prev);
+        if (nextBtn) nextBtn.addEventListener('click', next);
+
+        carousel.addEventListener('mouseenter', stopAuto);
+        carousel.addEventListener('mouseleave', startAuto);
+
+        update();
+        startAuto();
+      });
+    });
+  </script>
+</body>
+</html>
+

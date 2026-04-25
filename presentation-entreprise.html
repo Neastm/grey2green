@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grey2Green | Presentation de l'entreprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand-wrap" href="index.html">
+        <img class="brand-logo" src="images\logo sans texte.png" alt="Logo Grey2Green" onerror="this.style.display='none'">
+        <span class="brand">Grey2Green</span>
+      </a>
+      <div class="nav-actions">
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Accueil</a>
+          <a class="nav-link active" href="presentation-entreprise.html">Presentation</a>
+          <a class="nav-link" href="vision-mission.html">Vision & Mission</a>
+          <a class="nav-link" href="marketing-floorplan.html">Marketing</a>
+          <a class="nav-link" href="about-us.html">About Us</a>
+        </nav>
+        <a class="nav-cta" href="contact.html">Contactez nous</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="container">
+      <section class="page-heading" aria-label="Titre de la page">
+        <h1>Presentation de l'entreprise</h1>
+        <img class="page-heading-logo" src="images\logo avec texte.png" alt="Logo Grey2Green" onerror="this.style.display='none'">
+      </section>
+
+      <section class="card">
+        <p>
+          Grey2Green est une entreprise engagee dans la revalorisation des eaux grises pour repondre aux enjeux
+          de secheresse urbaine. Nous aidons les villes, les sites tertiaires et les amenageurs a reduire leur
+          dependance a l'eau potable pour les usages techniques.
+        </p>
+      </section>
+
+      <section class="card two-col">
+        <article>
+          <h2>Notre positionnement</h2>
+          <p>
+            Grey2Green se positionne comme l'interface entre la production d'eaux grises des immeubles et le besoin
+            d'irrigation des collectivites. Notre solution se situe entre les approches lourdes des grands acteurs
+            du traitement de l'eau et les initiatives locales peu structurees.
+          </p>
+          <ul>
+            <li>Solution modulaire de valorisation locale des eaux grises en milieu urbain.</li>
+            <li>Approche plus flexible operationnellement que les offres industrielles classiques.</li>
+            <li>Modele structure incluant installation, maintenance et suivi des impacts.</li>
+          </ul>
+        </article>
+        <aside class="image-box">
+          <img src="images/Gemini_Generated_Image_jbbknijbbknijbbk.png" alt="Illustration du projet Grey2Green">
+        </aside>
+      </section>
+
+      <section class="card">
+        <div class="two-col">
+          <article>
+            <h2>Produit propose</h2>
+            <p>
+              Nous proposons un ensemble produit concret compose de filtres et de citernes, installe directement
+              sur site pour recuperer, traiter et stocker les eaux grises. Cette base materielle permet une
+              reutilisation locale fiable pour les usages techniques, notamment l'irrigation urbaine.
+            </p>
+            <ul>
+              <li>Filtres adaptes aux besoins de traitement des eaux grises.</li>
+              <li>Citernes de stockage dimensionnees selon le volume du site.</li>
+              <li>Installation complete des equipements par notre equipe technique.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Service propose</h2>
+            <p>
+              En complement des equipements, nous proposons des services pour garantir la continuite d'exploitation,
+              la performance du systeme et la conformite environnementale du projet dans la duree.
+            </p>
+            <ul>
+              <li>Abonnement de maintenance et d'accompagnement a l'utilisation.</li>
+              <li>Interventions techniques hors contrat en cas de besoin ponctuel.</li>
+              <li>Service d'accompagnement a la certification environnementale.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="image-box auto-carousel centered-carousel" data-carousel>
+          <div class="auto-carousel-track">
+            <img src="images\Gemini_Generated_Image_riisbrriisbrriis.png" alt="Presentation produit et service - visuel 1">
+            <img src="images\Gemini_Generated_Image_wlpu98wlpu98wlpu.png" alt="Presentation produit et service - visuel 2">
+          </div>
+          <button class="carousel-btn carousel-btn-prev" type="button" data-carousel-prev aria-label="Image precedente">‹</button>
+          <button class="carousel-btn carousel-btn-next" type="button" data-carousel-next aria-label="Image suivante">›</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Grey2Green</div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousels = document.querySelectorAll('[data-carousel]');
+      carousels.forEach((carousel) => {
+        const track = carousel.querySelector('.auto-carousel-track');
+        const prevBtn = carousel.querySelector('[data-carousel-prev]');
+        const nextBtn = carousel.querySelector('[data-carousel-next]');
+        if (!track) return;
+
+        const slides = track.querySelectorAll('img');
+        const maxSlides = slides.length;
+        if (maxSlides < 2) return;
+        track.style.setProperty('--slides', String(maxSlides));
+
+        let current = 0;
+        let timerId = null;
+
+        const update = () => {
+          const shift = -(100 / maxSlides) * current;
+          track.style.transform = `translateX(${shift}%)`;
+        };
+
+        const next = () => {
+          current = (current + 1) % maxSlides;
+          update();
+        };
+
+        const prev = () => {
+          current = (current - 1 + maxSlides) % maxSlides;
+          update();
+        };
+
+        const startAuto = () => {
+          if (timerId !== null) return;
+          timerId = setInterval(next, 6000);
+        };
+
+        const stopAuto = () => {
+          if (timerId === null) return;
+          clearInterval(timerId);
+          timerId = null;
+        };
+
+        if (prevBtn) prevBtn.addEventListener('click', prev);
+        if (nextBtn) nextBtn.addEventListener('click', next);
+
+        carousel.addEventListener('mouseenter', stopAuto);
+        carousel.addEventListener('mouseleave', startAuto);
+
+        update();
+        startAuto();
+      });
+    });
+  </script>
+</body>
+</html>
+
