@@ -29,7 +29,6 @@
           <a class="nav-link" href="presentation-entreprise.html">Presentation</a>
           <a class="nav-link active" href="vision-mission.html">Vision & Mission</a>
           <a class="nav-link" href="marketing-floorplan.html">Marketing</a>
-          <a class="nav-link" href="about-us.html">About Us</a>
         </nav>
         <a class="nav-cta" href="contact.html">Contactez nous</a>
       </div>
@@ -40,24 +39,16 @@
     <div class="container">
       <section class="card">
         <h1>Vision et mission</h1>
-        <p>
-          Notre vision : Devenir un acteur de référence dans la transition hydrique urbaine en transformant les eaux grises en ressources durables, au cœur des villes. <br>
-          Notre mission : Concevoir et déployer des solutions de réutilisation des eaux grises pour préserver les ressources, réduire les rejets et accompagner la transition vers des modèles circulaires durables.
-        </p>
       </section>
 
-      <section class="card two-col">
+      <section class="card two-col vision-mission-detail">
         <article>
-          <h2>Plus en détail</h2>
           <p>
-            Notre vision consiste a faire des eaux grises une ressource urbaine, c'est-a-dire une ressource
-            pleinement integree dans les pratiques de la ville et dans la gestion quotidienne de l'eau.
+            Notre vision : Devenir un acteur de référence dans la transition hydrique urbaine en transformant les eaux grises en ressources durables, au cœur des villes.
           </p>
-          <ul>
-            <li>Notre mission est de concevoir des systemes fiables de reutilisation des eaux grises.</li>
-            <li>Ces systemes visent a reduire les rejets et a economiser l'eau potable.</li>
-            <li>Ils renforcent en meme temps la capacite d'adaptation des villes.</li>
-          </ul>
+          <p>
+            Notre mission : Concevoir et déployer des solutions de réutilisation des eaux grises pour préserver les ressources, réduire les rejets et accompagner la transition vers des modèles circulaires durables.
+          </p>
         </article>
         <aside class="image-box">
           <img src="images\Gemini_Generated_Image_arw2unarw2unarw2.png" alt="Visuel vision et mission Grey2Green">
@@ -85,9 +76,9 @@
       if (prefersReducedMotion) return;
 
       const config = {
-        backgroundColor: '#061726',
-        lineColor: '#10b981',
-        barColor: '#10b981',
+        backgroundColor: '#07345c',
+        lineColor: '#22c55e',
+        barColor: '#22c55e',
         lineWidth: 1,
         animationSpeed: 0.005,
         removeWaveLine: true
@@ -242,7 +233,7 @@
           const lineMouseInfluence = getMouseInfluence(x, height / 2);
 
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(16,185,129,${0.22 + lineMouseInfluence * 0.35})`;
+          ctx.strokeStyle = `rgba(34,197,94,${0.25 + lineMouseInfluence * 0.38})`;
           ctx.lineWidth = config.lineWidth + lineMouseInfluence * 1.2;
           ctx.moveTo(x, 0);
           ctx.lineTo(x, height);
@@ -290,7 +281,7 @@
               const radius = progress * 300;
               const alpha = (1 - progress) * 0.2 * burst.intensity;
               ctx.beginPath();
-              ctx.strokeStyle = `rgba(16,185,129,${alpha})`;
+              ctx.strokeStyle = `rgba(34,197,94,${alpha})`;
               ctx.lineWidth = 2;
               ctx.arc(burst.x, burst.y, radius, 0, 2 * Math.PI);
               ctx.stroke();
