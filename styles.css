@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #061722;
   --panel: rgba(16, 55, 75, 0.48);
   --panel-strong: rgba(23, 91, 105, 0.54);
@@ -630,6 +630,25 @@ a {
 
 .find-us-section {
   align-items: center;
+}
+
+.retroplanning-section {
+  display: flex;
+  justify-content: center;
+}
+
+.retroplanning-image {
+  width: min(900px, 100%);
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.retroplanning-image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .find-us-media {
